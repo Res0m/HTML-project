@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Разработка веб-приложения</title>
+</head>
+  <body>
+    <form>
+      <h1>Разработка веб-приложения</h1>
+      <p>Заполните форму и мы обязательно свяжемся с вами в ближайшее время для уточнения деталей</p>
+
+      <label for="name">Имя</label>
+      <input type="text" id="name" name="name" placeholder="Иванов Иван Иванович" required>
+
+      <label for="email">Ваш email</label>
+      <input type="text" name="email" id="email" required placeholder="ivanivanov@mail.ru">
+      
+      <label for="phone">Номер телефона</label>
+      <input type="number" name="phone" id="phone" required placeholder="+7 912 345 67 89">
+
+      <label for="country">Страна</label>
+      <select name="country" id="country">
+        <option value="Rus" selected>Россия</option>
+        <option value="Bel">Беларусь</option>
+        <option value="Kz">Казахстан</option>
+        <option value="Kg">Киргизстан</option>
+      </select>
+
+      <label for="date">Дата</label>
+      <input type="date" id="date" name="date" required >
+
+      <label for="comment">Комментарий</label>
+      <textarea name="comment" id="comment"></textarea>
+
+
+    </form>
+  </body>
+</html>

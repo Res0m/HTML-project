@@ -6,6 +6,8 @@
     <title>Макет</title>
     <link rel="shortcut icon" href="faviconHTML.ico.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
   </head>
   <body>
     <header class="main-header-block">
@@ -146,7 +148,7 @@
       <div id="modal-content">
           <span class="close">&times;</span>
           <form id="contactForm">
-              <h1>Разработка веб-приложения</h1>
+              <h1 id="h-services"></h1>
               <p>Заполните форму и мы обязательно свяжемся с вами в ближайшее время для уточнения деталей</p>
               <label for="name">Имя</label>
               <input type="text" id="name" name="name" placeholder="Иванов Иван Иванович" required>
@@ -155,7 +157,7 @@
               <input type="text" name="email" id="email" required placeholder="ivanivanov@mail.ru">
 
               <label for="phone">Номер телефона</label>
-              <input type="tel" name="phone" id="phone" required placeholder="+7 912 345 67 89">
+              <input type="tel" name="phone" id="phon" class="phon" required>
 
               <label for="country">Страна</label>
               <select name="country" id="country">
@@ -178,7 +180,9 @@
               <input type="submit" value="Отправить">
           </form>
       </div>
-  </div>
+  </div>  
   <script src="window.js"></script>
+  <script src="jquery.maskedinput.min.js"></script>
+  <script src="maskphone.js"></script>
   </body>
 </html>

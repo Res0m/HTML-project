@@ -4,17 +4,18 @@ const span = document.getElementsByClassName("close")[0];
 const form = document.getElementById("contactForm");
 const successMessage = document.getElementById("successMessage");
 const openModalButtons = document.querySelectorAll(".openModalButton");
+
 // Открываем модальное окно при нажатии на кнопку
 openModalButtons.forEach(button => {
-button.addEventListener("click", function() {
-    // Опционально: вы можете получить название продукта и отобразить его в форме
-    const productName = this.getAttribute("data-product");
-    // Здесь вы можете использовать productName для заполнения формы или показа информации
-    // Например, заполняем поле комментария:
-    document.getElementById("comment").value = `Запрос для: ${productName}`;
-    modal.style.display = "block";
-});
+    button.addEventListener("click", function() {
+        // Получаем название продукта и устанавливаем его в заголовок формы
+        const productName = this.getAttribute("data-product");
+        document.getElementById("h-services").textContent = productName; // Устанавливаем текст заголовка
+        document.getElementById("comment").value = `Запрос для: ${productName}`; // Заполняем комментарий
+        modal.style.display = "block"; // Показываем модальное окно
+    });
 }); 
+
 // Закрываем модальное окно при нажатии на "X"
 span.onclick = function() {
     modal.style.display = "none";
@@ -29,7 +30,8 @@ window.onclick = function(event) {
 
 // Валидация формы и обработка отправки
 form.onsubmit = function(event) {
-event.preventDefault(); // Предотвращаем стандартное поведение формы
-modal.style.display = "none"; // Закрываем модальное окно после отправки
-alert("Форма успешно отправлена!"); // Показываем сообщение (или можно использовать successMessage)
+    event.preventDefault(); // Предотвращаем стандартное поведение формы
+    modal.style.display = "none"; // Закрываем модальное окно после отправки
+    alert("Форма успешно отправлена!"); // Показываем сообщение (или можно использовать successMessage)
 };
+

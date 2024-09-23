@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- lang="ru" - выбрали русский язык как основной, чтобы браузер смог определить(если есть функция перевода страницы) исходный язык-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="Макет" content="Страничка по макету">
+    <title>Макет</title>
+    <link rel="icon" href="/link elemetns/faviconHTML.ico.png">
+    <link rel="stylesheet" href="style.css">
+  </head> <!-- Тег head, в к отором указываются метаданные, подключение css файла и Фавинок -->
+  <body> <!-- Тег body, в котором находяться основные блочные и строчные теги, образующие визуальную состовляющую страницы-->
+    <header class="main-header-block"><!-- Тег header является блоком верхней части страницы, в которой указывается Логотип, Группа, ФИО и меню-->
+      <div class="main-header-block-div"><!-- Контейнер для Лого, ФИО, Группы  -->
+        <img src="/link elemetns/rtumirealogo.png" alt="logo" class="main-header-block-div-logo" style="width: 150px">
+        <p class="main-header-block-div--Group">
+Группа ЭФБО-09-23
+        </p>
+        <p class="main-header-block--inicials">
+Ремзов Антон Максимович
+        </p>
+      </div>
+      <nav class="main-header-block-nav"><!-- Конейнер nav, предназначенный для верхнего навигационного Меню-->
+        <div class="main-header-block-nav-div">
+        <ul class="main-header-block-nav-div-list"><!-- Блочный элемент для списка-->
+          <li class="main-header-block-nav-div-list-pl" style="display: inline" >
+            <a href="index1.html" class="main-header-block-nav-div-list-link" style="text-decoration: none;"> <!-- Здесь мы используем тег a, для якорной ссылки-->
+Главная
+            </a>
+          </li>
+          <li class="main-header-block-nav-div-list-pl" style="display: inline">
+            <a href="index3.html" class="main-header-block-nav-div-list-link" style="text-decoration: none;">
+Первый семестр 
+            </a>
+          </li>
+          <li class="main-header-block-nav-div-list-pl" style="display: inline">
+            <a href="" class="main-header-block-nav-div-list-link" style="text-decoration: none;">
+Второй семестр
+            </a>
+          </li>
+          <li class="main-header-block-nav-div-list-pl" style="display: inline">
+            <a href="index2.html" class="main-header-block-nav-div-list-link" style="text-decoration: none;"> <!-- Якорная ссылка перекидывает на вторую страничку "Услуги"-->
+Услуги
+            </a>
+          </li>
+          <li class="main-header-block-nav-div-list-pl" style="display: inline">
+            <a href="" class="main-header-block-nav-div-list-link" style="text-decoration: none;">
+Авторизация
+            </a>
+          </li>
+        </ul>       <!-- Закрывающие верхней панели-->
+      </div>        
+      </nav>
+    </header>
+  <aside class="main-aside"> <!-- Блок боковой панели, где находиться навигация по странице-->
+    <div class="main-aside-div">
+    <ul class="main-aside-div-list" style="list-style-type: none;">
+      <li class="main-aside-div-list-list-pl">
+        <a href="index1.html" class="aside-link" style="text-decoration: none;"> <!-- Здесь я подключил к "Навигация по странице" якорную ссылку возвращающую пользователя на Главную страницу, т.е данную страницу-->
+Навигация по странице
+        </a>
+      </li>
+      <li class="main-aside-div-list-pl">
+        <a href="#lection" class="main-aside-div-list-link" style="text-decoration: none;">
+Лекция 
+        </a>
+      </li>
+      <li class="main-aside-div-list-pl">
+        <a href="#practice" class="main-aside-div-list-link" style="text-decoration: none;">
+Практика 
+        </a>
+      </li>
+      <li class="main-aside-div-list-pl">
+        <a href="#adressVUZ" class="main-aside-div-list-link" style="text-decoration: none;"> 
+Адрес ВУЗа
+        </a>
+      </li>
+      <li class="main-aside-div-list-pl">
+        <a href="#workpgrm" class="main-aside-div-list-link" style="text-decoration: none;">
+Рабочая программа
+        </a>
+      </li>
+    </ul>
+  </div>
+  </aside>
+  <main class="main-info"> <!-- Важнейший тег main, в котором находиться основной контент страницы-->
+    <div class="main-info-div">
+      <h1> Первый семестр </h1>
+      <section>
+        <h1> Лекции </h1>
+        
+      </section>
+    </div>
+  </main>
+  <footer class="main-footer">  <!-- Завершающий блок footer, отвечающий за нижнюю информационную панель в конце страницы-->
+    <div class="main-footer-div">
+      <p class="main-footer-div-__p">&copy;
+        2024 Все права защищены.              <!-- По аналагу из файла ПР_1 &copy + 2024 Все права защищены. -->
+      </p>
+      <ul class="main-footer-div-list">
+        <li class="main-footer-div-list-pl" style="display: inline;">
+          <a href="./vkontakte.ru" class="main-footer-div-list-link-socialweb" style="text-decoration: none;">
+            <img src="/link elemetns/vkontakteSVG.svg" class="main-footer-div-list-img" alt="vkontakte" width="50">
+          </a>
+        </li>
+        <li class="main-footer-div-list-pl" style="display: inline;">
+          <a href="./telegramm.ru" class="main-footer-div-list-link-socialweb" style="text-decoration: none;">
+            <img src="/link elemetns/telegrammSVG.svg" class="main-footer-div-list-img" alt="telegramm" width="50">                  <!-- Подключил 3 SVG файла и создал якорные ссылки для перехода по моим соц.сетям-->
+          </a>
+        </li>
+        <li class="main-footer-div-list-pl" style="display: inline;">
+          <a href="./whatsapp.com" class="main-footer-div-list-link-socialweb" style="text-decoration: none;">
+            <img src="/link elemetns/whatsappSVG.svg" class="main-footer-div-list-img" alt="whatsapp" width="50" >
+          </a>
+        </li>
+      </ul>
+    </div>
+    </footer>
+  </body>
+</html>
+
+
+<!-- Все блочные и строчные теги имеют классы, а некоторые имеют id, нужно это для работы в CSS по классам-->

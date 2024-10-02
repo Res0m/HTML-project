@@ -2,6 +2,9 @@
 #modal {
     display: none; /* Скрываем модальное окно по умолчанию */
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
     left: 0;
     top: 0;
@@ -50,4 +53,206 @@
 .content {
     padding: 20px;
     height: calc(100% - 60px); /* Adjust height for header */
+}
+
+.main-header-block{
+    padding: 0;
+}
+
+
+
+
+.main-header-block-div{
+    width: 100%;
+    height: 160px;
+}
+
+
+
+
+.main-header-block-div-logo{
+    padding: 10px;
+    width: 210px;
+}
+
+
+
+
+.main-header-block-div-par{
+    display: flex;
+    float: right;
+    text-align: right;
+    justify-content: right;
+    align-items: center;
+    font-size: 25px;
+    padding-top: 65px;
+    padding-right: 20px;
+}
+
+
+
+
+
+.main-header-block-nav-div-list {
+    list-style-type: none; /* Убираем маркеры списка */
+}
+
+
+
+
+.main-header-block-nav-div-list-pl {
+    display: inline;
+}
+
+
+
+
+.main-header-block-nav-div-list-link{
+    text-decoration: none;
+}
+
+
+
+.main-header-block-nav-div-list{
+    display: flex;
+    gap: 50px;
+    justify-content: left;
+    align-items: center;
+    margin-top:  35px;
+
+}
+
+
+
+.main-header-block-nav-div-list-link{
+    font-size: 23px;
+    color: white
+    
+}
+
+
+
+
+.main-header-block-nav-div{
+    background-color: gray;
+    border: 1px solid;
+    width: 100%;
+    height: 100px;
+    
+}
+
+
+
+
+.main-aside{
+    
+    float: left; /* Выравниваем влево */
+    width: 15%; /* Задаём ширину боковой панели */
+    
+    box-sizing: border-box; /* Учитываем границы в ширине */
+}
+.main-aside-div-list{
+    list-style-type: none;
+    font-size: 20px;
+}
+.main-aside-div-list-link{
+    text-decoration: none;
+
+}
+
+
+
+
+.main-info{
+    float: right; /* Выравниваем вправо */
+    width: 85%; /* Задаём ширину основного контента */
+    
+    text-align: left;
+    padding-left: 100px; /* Отступ для текста */
+    margin-left: -1px; /* Перекрываем границу боковой панели */
+    box-sizing: border-box; /* Учитываем границы в ширине */
+
+}
+
+
+
+
+.main-info-div-welcome-__h1{
+    text-align: left;
+    font-size: 40px;
+}
+
+
+.avatar{
+    width: 250px;
+    float: right;
+   
+    margin-right: 100px;
+    
+}
+
+
+
+
+
+.main-footer{
+    text-align: center;
+    clear: both; /* Убираем проблемы с флоатами */
+    
+}
+
+.main-info-div-frontend{
+    
+    margin-top: 200px;
+}
+.main-info-div-welcome-__p{
+   
+    margin-right: 500px
+}
+
+
+
+.form-index2 {
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
 }

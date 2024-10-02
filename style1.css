@@ -1,0 +1,96 @@
+/* Общие стили для body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Стили для заголовка */
+.main-header-block {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border: 1px solid;
+}
+
+/* Стили для логотипа и информации */
+.main-header-block-div {
+    display: flex;
+    align-items: center;
+}
+
+.main-header-block-div-logo {
+    width: 100px; /* Ширина логотипа */
+    margin-right: 20px;
+}
+
+.main-header-block-div-par {
+    margin: 0; /* Убираем отступы */
+}
+
+/* Стили для навигации */
+
+.main-header-block-nav-div-list {
+    list-style-type: none; /* Убираем маркеры списка */
+}
+
+.main-header-block-nav-div-list-pl {
+    display: inline;
+}
+
+/* Стили для боковой панели */
+.main-aside {
+    width: 200px; /* Ширина боковой панели */
+    float: left; /* Выравниваем влево */
+    padding: 20px;
+}
+
+.main-aside-div-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+/* Стили для основного контента */
+.main-info {
+    margin-left: 220px; /* Отступ слева для основного контента */
+    padding: 10px;
+}
+
+.main-info-div-welcome h1,
+.main-info-div-frontend h1,
+.main-info-div-backend h1 {
+    color: #007bff; /* Цвет заголовков */
+}
+
+/* Стили для секций */
+.main-info-div-frontend,
+.main-info-div-backend {
+    margin-top: 20px; /* Отступ между секциями */
+}
+
+/* Стили для видео */
+video {
+    width: 100%; /* Адаптивная ширина видео */
+    max-width: 900px; /* Максимальная ширина видео */
+}
+
+/* Стили для нижнего колонтитула */
+.main-footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    clear: both; /* Убираем проблемы с флоатами */
+}
+
+/* Стили для социальных иконок */
+.main-footer-div-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+.main-footer-div-list-pl {
+    display: inline;
+    margin: 0 10px; /* Отступы между иконками */
+}

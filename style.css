@@ -147,7 +147,7 @@
 .main-aside{
     
     float: left; /* Выравниваем влево */
-    width: 15%; /* Задаём ширину боковой панели */
+    width: 18%; /* Задаём ширину боковой панели */
     
     box-sizing: border-box; /* Учитываем границы в ширине */
 }
@@ -157,15 +157,25 @@
 }
 .main-aside-div-list-link{
     text-decoration: none;
+    color: rgb(133, 126, 126);
 
 }
+
+.main-aside-div-list-link:hover{
+    color:red;
+}
+
+.main-aside-div-list-link:active{
+    color: rgb(141, 30, 30)
+}
+
 
 
 
 
 .main-info{
     float: right; /* Выравниваем вправо */
-    width: 85%; /* Задаём ширину основного контента */
+    width: 82%; /* Задаём ширину основного контента */
     
     text-align: left;
     padding-left: 100px; /* Отступ для текста */
@@ -255,4 +265,43 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+
+.openModalButton{
+    background-color: rgb(44, 44, 160);
+    padding: 15px 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.openModalButton:hover{
+    color: violet;
+
+}
+
+.openModalButton:active{
+    color: rgb(145, 55, 145);
+}
+
+.main-info-div-section-img-dis-list-img{
+    width: 250px;
+    height: 230px;
+    
+    border-radius: 5px;
+    border: 1px solid;
+    padding: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
+
+
+.main-info-div-section-img-dis-list-img:hover{
+    background-color: pink;
+}
+.main-info-div-section-img-dis-list-pl{
+    text-align: left;
+    
+    padding: 15px;
+    width: 290px;
 }

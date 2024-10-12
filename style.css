@@ -279,4 +279,12 @@ tr:hover{
 }
 
 
+.grid-container {
+    display: grid; /* Grid Layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    grid-template-rows: repeat(2, auto); /* 2 строки */
+    gap: 10px; /* Промежуток между элементами */
+    padding: 20px;
+}
+
 

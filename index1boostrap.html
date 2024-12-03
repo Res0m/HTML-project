@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Макет" content="Страничка по макету">
+  <title>Макет</title>
+  <link rel="shortcut icon" href="faviconHTML.ico.png" type="image/x-icon">
+
+  <!-- Подключаем Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Одинаковая высота карточек */
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card-body {
+      flex-grow: 1;
+    }
+
+    /* Изображения карточек с сохранением пропорций */
+    .card-img-top {
+      object-fit: contain; /* Изображение масштабируется, чтобы полностью поместиться */
+      width: 100%; /* Ширина карточки */
+      height: 200px; /* Высота изображения, но не растягиваем */
+    }
+
+    /* Убираем фоновый цвет под navbar */
+    .main-header-block-nav {
+      background-color: #6c757d !important; /* цвет фона для навигации */
+    }
+
+    /* Для кнопки на карточке */
+    .card-body .btn {
+      margin-top: auto;
+    }
+
+    /* Скрыть текст в панели и оставить только выпадающий список на мобильных */
+    @media (max-width: 768px) {
+      .main-header-block-nav .nav-item:not(.dropdown) {
+        display: none;
+      }
+
+      .main-header-block-nav .dropdown {
+        display: block;
+      }
+    }
+
+    /* Стили для формы */
+    .form-index2 {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .form-index2 .form-control {
+      padding: .5rem;
+    }
+
+    /* Улучшения для выравнивания формы */
+    .form-index2 .btn {
+      padding: .5rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .form-index2 .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Для модального окна */
+    .modal-content {
+      padding: 2rem;
+    }
+
+    /* Модификация заголовка модального окна */
+    .modal-header {
+      display: flex;
+      justify-content: space-between; /* Располагаем элементы по краям */
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .modal-header .btn-close {
+      margin-top: -1rem; /* Если нужно подправить положение крестика */
+    }
+
+    .modal-header h5 {
+      margin-bottom: 0; /* Убираем отступ снизу для заголовка */
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="main-header-block bg-primary py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <img src="/link elemetns/rtumirealogo.png" alt="logo" class="main-header-block-div-logo" width="210">
+      <div class="text-white">
+        <p>Группа ЭФБО-09-23<br>Ремзов Антон Максимович</p>
+      </div>
+    </div>
+    <!-- Навигация с выпадающим меню -->
+    <nav class="main-header-block-nav bg-secondary">
+      <div class="container">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a href="index1.html" class="nav-link text-white">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="index3.html" class="nav-link text-white">Первый семестр</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white">Второй семестр</a>
+          </li>
+          <li class="nav-item">
+            <a href="index2.html" class="nav-link text-white">Услуги</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white">Авторизация</a>
+          </li>
+          <!-- Выпадающее меню для мобильных версий -->
+          <li class="nav-item dropdown d-block d-md-none">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Меню
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="index1.html">Главная</a></li>
+              <li><a class="dropdown-item" href="index3.html">Первый семестр</a></li>
+              <li><a class="dropdown-item" href="#">Второй семестр</a></li>
+              <li><a class="dropdown-item" href="index2.html">Услуги</a></li>
+              <li><a class="dropdown-item" href="#">Авторизация</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid d-flex">
+    <aside class="main-aside col-md-3 col-lg-2 bg-burlywood p-3">
+      <ul class="list-unstyled">
+        <li><p>Навигация по странице</p></li>
+        <li><a href="#frontend" class="text-decoration-none text-dark">Фронтенд</a></li>
+        <li><a href="#backend" class="text-decoration-none text-dark">Бэкенд</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-info col-md-9 col-lg-10 p-3">
+      <section class="main-info-div-section-img-dis">
+        <h1>Разработка веб-приложений</h1>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <!-- Карточки товара -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="/link elemetns/vizitka2.png" alt="business card website" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">Сайт-визитка</p>
+                <button class="btn btn-primary openModalButton" data-bs-toggle="modal" data-bs-target="#modal" data-product="Сайт-визитка">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/link elemetns/corporate2.jpg" alt="corporate website" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">Корпоративный сайт</p>
+                <button class="btn btn-primary openModalButton" data-bs-toggle="modal" data-bs-target="#modal" data-product="Корпоративный сайт">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="/link elemetns/shop2.jpg" alt="web store" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">Интернет-магазин</p>
+                <button class="btn btn-primary openModalButton" data-bs-toggle="modal" data-bs-target="#modal" data-product="Интернет-магазин">Заказать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-section-lection">
+        <h1>Лекции</h1>
+        <table class="table table-bordered table-striped table-responsive">
+          <thead>
+            <tr>
+              <th>Номер</th>
+              <th>Тема</th>
+              <th>Посещение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Основы языка HTML</td>
+              <td style="text-align: center; vertical-align: middle;">&#9745;</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Углубленное изучание HTML</td>
+              <td style="text-align: center; vertical-align: middle;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Основы работы с CSS</td>
+              <td style="text-align: center; vertical-align: middle;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Адаптивная верстка. Flexbox и Grid Layout</td>
+              <td style="text-align: center; vertical-align: middle;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Bootstrap - работа с фреймворками</td>
+              <td style="text-align: center; vertical-align: middle;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Основы языка JavaScript</td>
+              <td style="text-align: center; vertical-align: middle;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Работа с DOM и событиями в JavaScript</td>
+              <td style="text-align: center; vertical-align: middle;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Введение в GitHub и GitHub Pages</td>
+              <td style="text-align: center; vertical-align: middle;">&#9744;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <section class="main-section-practice">
+        <h1 id="practice">Практики</h1>
+        <table class="table table-bordered table-striped table-responsive">
+          <thead>
+            <tr>
+              <th>Номер</th>
+              <th>Тема</th>
+              <th>Посещение</th>
+              <th>Выполнение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Основы языка HTML</td>
+              <td style="text-align: center;">&#9745;</td>
+              <td style="text-align: center;">&#9745;</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Формы и кнопки в HTML</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Таблицы и интерактивные элементы в HTML</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Основы работы в CSS</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Работа с классами CSS</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Работа с сетками и разметкой в HTML</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Адаптивная вёрстка</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Bootstrap</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Основы языка JavaScript</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Базовые задачи на JS</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>DOM-структура приложений и работа с объектами в языке JS</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Встраивание скриптов</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Отладка сценариев</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Анимации и работа с ними</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>GitHub</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>Защита проекта</td>
+              <td style="text-align: center;">&#9744;</td>
+              <td style="text-align: center;">&#9744;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+
+      <!-- Модальное окно с формой -->
+      <div id="modal" class="modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="service-name">Заказ услуги</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="contactForm" class="form-index2">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Имя</label>
+                  <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Телефон</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <div class="mb-3">
+                  <label for="country" class="form-label">Страна</label>
+                  <select class="form-select" name="country" id="country">
+                    <option value="Rus" selected>Россия</option>
+                    <option value="Bel">Беларусь</option>
+                    <option value="Kz">Казахстан</option>
+                    <option value="Kg">Киргизстан</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="date" class="form-label">Дата</label>
+                  <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+                <div class="mb-3">
+                  <label for="comment" class="form-label">Комментарий</label>
+                  <textarea class="form-control" name="comment" id="comment"></textarea>
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" name="user_agreement" id="user_agreement" required>
+                  <label for="user_agreement" class="form-check-label">Согласен на обработку моих персональных данных</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="main-footer bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <p>&copy; 2024 Все права защищены.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="mx-2"><a href="./vkontakte.ru" class="text-white"><img src="/link elemetns/vkontakteSVG.svg" alt="vkontakte" width="50"></a></li>
+        <li class="mx-2"><a href="./telegramm.ru" class="text-white"><img src="/link elemetns/telegrammSVG.svg" alt="telegramm" width="50"></a></li>
+        <li class="mx-2"><a href="./whatsapp.com" class="text-white"><img src="/link elemetns/whatsappSVG.svg" alt="whatsapp" width="50"></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Подключаем Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Скрипт для обновления наименования услуги в модальном окне -->
+  <script>
+    document.querySelectorAll('.openModalButton').forEach(button => {
+      button.addEventListener('click', function() {
+        const productName = this.getAttribute('data-product');
+        document.getElementById('service-name').innerText = productName;
+      });
+    });
+  </script>
+<script src="jsforboostrap.js"></script>
+</body>
+</html>

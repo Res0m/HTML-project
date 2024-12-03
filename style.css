@@ -130,13 +130,15 @@ aside{
     box-sizing: border-box; /* Учитываем границы в ширине */    
     background-color: burlywood;
     
+    
 }
 
-.main-aside-div{
-}
+
 
 
 .main-aside-div-list{
+    margin-right: auto auto;
+    padding-left: 20px;
     list-style-type: none;
     font-size: 20px;
 }
@@ -158,7 +160,7 @@ aside{
 main{
     width: 82%; 
     text-align: left;
-    padding-left: 100px; 
+    padding-left: 30px; 
     margin-left: -1px; 
     box-sizing: border-box; 
     background-color: #4CAF50;
@@ -260,8 +262,8 @@ input[type="submit"]:hover {
 
 
 .main-info-div-section-img-dis-list{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
     align-items: space-around;
 }
@@ -321,7 +323,7 @@ tr:hover{
 }
 
 
-@media (max-width: 1200px){
+@media (max-width: 1250px){
     .container{
         width: auto auto;
     }
@@ -334,7 +336,13 @@ tr:hover{
         width: 100%;
     }
     .main-info-div-section-img-dis-list{
-        max-width: 100%;
+        width: 100%;
+    }
+    .main-header-block-nav-div-list-link {
+        font-size: 1.1rem; /* Уменьшаем размер шрифта */
+    }
+    .main-info-div-section-img-dis-list{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 
 }
@@ -351,11 +359,23 @@ tr:hover{
         height: auto;   
        }
        .main-info-div-section-img-dis-list{
-        flex-direction: column;
         max-width: 100%;
        }
+       .main-header-block-nav-div-list-link {
+        font-size: 1rem; /* Уменьшаем размер шрифта */
+    }
+
+    .main-header-block-nav-div-list-pl {
+        margin-right: 15px; /* Уменьшаем отступы */
+    }
+    .main-info-div-section-img-dis-list{
+        grid-template-columns: 1fr;
+    }
+}
+      
 
 @media (max-width: 768px){
+    
     body{
         width: 100%;
         grid-template-rows: 1fr;
@@ -364,6 +384,7 @@ tr:hover{
     .container{
         width: auto auto;
     }
+  
     video{
         max-width: 100%;
         height: auto;   
@@ -377,6 +398,15 @@ tr:hover{
     footer{
         width: 100%;
     }
+    .main-header-block-nav-div-list {
+        justify-content: center; /* Центрируем элементы */
+    }
+
+    .main-header-block-nav-div-list-link {
+        font-size: 0.9rem; /* Уменьшаем размер шрифта */
+        padding: 5px; /* Добавляем отступы для кликабельности */
+    }
+}
 @media (max-width: 480px){
     body{
         width: 100%;
@@ -390,3 +420,18 @@ tr:hover{
         max-width: 90%;
         height: auto;   
        }
+       .main-header-block-nav-div-list {
+        flex-direction: column; /* Меняем направление на колонку */
+        align-items: center; /* Центрируем элементы */
+    }
+
+    .main-header-block-nav-div-list-pl {
+        margin-right: 0; /* Убираем правые отступы */
+        margin-bottom: 10px; /* Добавляем отступы снизу для разделения */
+    }
+
+    .main-header-block-nav-div-list-link {
+        font-size: 0.8rem; /* Уменьшаем размер шрифта */
+    }
+}
+   

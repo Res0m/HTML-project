@@ -23,6 +23,8 @@
     width: 80%; /* Ширина модального окна */
 }
 
+
+  
 .close {
     color: #aaa; /* Цвет кнопки закрытия */
     float: right;
@@ -435,3 +437,28 @@ tr:hover{
     }
 }
    
+
+
+
+h1 {
+    transition: transform 0.3s ease;
+  }
+  
+  h1:hover {
+    transform: scale(1.2); /* Увеличение на 20% */
+  }
+
+
+  
+
+  .hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: none; /* Скрываем таблицу */
+  }
+  
+  .visible {
+    display: table; /* Появляется как таблица */
+    opacity: 1;
+  }
+  

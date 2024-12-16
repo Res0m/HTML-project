@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="12zadanie.js" defer></script>
+    <style>
+      /* Анимация для student-photo */
+      #student-photo {
+        transition: transform 3s ease-in-out; /* Плавная анимация */
+        display: block; /* Убедитесь, что изображение видно */
+        margin: 0 auto; /* Центровка изображения */
+      }
+    
+      #student-photo:hover {
+        transform: rotate(360deg); /* Полный оборот */
+      }
+    </style>
+    
+      
   </head>
   <body>
     <header class="main-header-block">
@@ -119,7 +133,22 @@
             </h2>
           </div>
     </div>
-  </main>
+    <section id="practice-section">
+      <table id="practice-table" class="hidden">
+          <thead>
+              <tr><th>Темы практик первого семестра</th></tr>
+          </thead>
+          <tbody>
+              <tr><td>HTML и CSS</td></tr>
+              <tr><td>Введение в JavaScript</td></tr>
+              <tr><td>DOM и события</td></tr>
+              <tr><td>Введение в серверные технологии</td></tr>
+          </tbody>
+      </table>
+      <button id="update-practice-button">Посмотреть практики второго семестра</button>
+  </section>
+  <img src="/link elemetns/student.jpg" alt="student photo" id="student-photo" style="width:200px; height:auto;">
+</main>
 </div>
   <footer class="main-footer">
     <div class="main-footer-div">
@@ -144,6 +173,7 @@
         </li>
       </ul>
     </div>
+    
     </footer>
 
      <!-- Модальное окно -->
@@ -189,5 +219,7 @@
   <script src="maskphone.js"></script>
   <script src="11zadanie.js"></script>
   <script src="12zadanie.js"></script>
+ <!-- <script src="13zadane.js"></script> -->
+  <script src="14zadanie.js"></script>
   </body>
 </html>
